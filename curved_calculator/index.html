@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Curved Edge Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="calc" role="application" aria-label="Calculator">
+      <div class="display" id="display">
+        <div class="expression" id="expr">0</div>
+        <div class="result" id="result">0</div>
+      </div>
+
+      <div class="keys" id="keys">
+        <button class="key" data-action="clear">AC</button>
+        <button class="key" data-action="neg">+/-</button>
+        <button class="key" data-action="percent">%</button>
+        <button class="key op" data-action="op">/</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key op" data-action="op">*</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key op" data-action="op">-</button>
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key op" data-action="op">+</button>
+
+        <button class="key" data-action="paren">(</button>
+        <button class="key" data-value="0">0</button>
+        <button class="key" data-action="dot">.</button>
+        <button class="key alt" data-action="equal">=</button>
+
+        <button class="key wide" data-action="sqrt">√x</button>
+        <button class="key" data-action="sqr">x²</button>
+        <button class="key" data-action="inv">1/x</button>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="copy">Copy result</button>
+        <button class="btn" id="mem-store">M+</button>
+        <button class="btn" id="mem-recall">MR</button>
+        <button class="btn" id="mem-clear">MC</button>
+        <button class="btn" id="toggle-theme">Toggle Theme</button>
+      </div>
+      <div class="muted">Keyboard: numbers/operators, Enter = =, Backspace to delete</div>
+    </div>
+
+    <aside class="panel" aria-label="Calculator panel">
+      <h3>History</h3>
+      <div class="history" id="history"></div>
+      <h3 style="margin-top:14px">About & Tips</h3>
+      <div class="muted">This calculator supports parentheses, decimals, percent, square, square root, reciprocal, memory store and keyboard input. It's a single-file app — copy the HTML and open in your browser.</div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
